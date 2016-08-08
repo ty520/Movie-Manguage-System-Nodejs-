@@ -1,0 +1,4 @@
+
+(function(){
+	$('#signupNameAlert').alert('close');
+})();

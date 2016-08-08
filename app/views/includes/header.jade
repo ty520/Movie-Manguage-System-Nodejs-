@@ -1,0 +1,28 @@
+
+.navbar.navbar-default.navbar-fixed-bottom
+	.container-fluid
+		.navbar-header
+			a.navbar-brand(href = '/') 最新上映
+		if user
+			ul.nav.navbar-nav.navbar-right
+				li.dropdown
+					a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") #{user.name}
+						span.caret 
+					ul.dropdown-menu
+						li
+							a.navbar-link(href = '/') 欢迎您，#{user.name}
+						li.divider(role = "separator")
+						li
+							a.navbar-link(href = "/logout") 登出
+		else
+			p.navbar-text.navbar-right
+				a.navbar-link(href = "/signup") 注册
+				span &nbsp;|&nbsp;
+				a.navbar-link(href = "/signin") 登录
+.container
+	.row
+		.page-header
+			h1 #{title}
+			.col-md-4
+				small 最新上映
+			

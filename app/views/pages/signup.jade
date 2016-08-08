@@ -1,0 +1,31 @@
+extend ../layout
+
+block content
+	.container
+		.row
+			.col-md-3
+			.col-md-5
+				form(method = "POST", action = "/user/signup")
+					.modal-header
+						h4.modal-title 注册
+					.modal-body
+						if error
+							div#signupNameAlert.alert.alert-danger.alert-dismissible(role = "alert")
+								span(arial-hidden = "true")&times; #{error}
+								button.close(type = "button", data-dismiss = "alert", arial-label = "Close")
+						.form-group
+							label(for = "signupName") 用户名
+							input#signupName.form-control(name = "user[name]", type = "text", placeholder = "Username")
+						.form-group
+							label(for = "signupPassword") 密码
+							input#signupPassword.form-control(name = "user[password]", type = "text", placeholder = "Password")
+						.form-group
+							label(for = "reSignupPassword") 确认密码
+							input#reSignupPassword.form-control(name = "user[repassword]", type = "text", placeholder = "Password")
+							if errorVal
+								span(arial-hidden = "true", color = "red")&times; #{errorVal}
+								button.close(type = "button", data-dismiss = "alert", arial-label = "Close")
+					.modal-footer
+						button.btn.btn-default(type = "button", data-dismiss = "modal") 关闭
+						button.btn.btn-success(type = "submit") 提交
+			.col-md-4

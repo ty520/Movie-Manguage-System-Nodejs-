@@ -1,0 +1,26 @@
+extend ../layout
+
+block content
+	.container
+		.row
+			.col-md-3
+			.col-md-5
+				form(method = "POST", action = "/user/signin")
+					.modal-header
+						h4.modal-title 登录
+					.modal-body
+						if error
+							div#signupNameAlert.alert.alert-danger.alert-dismissible(role = "alert")
+								span(arial-hidden = "true")&times; #{error}
+								button.close(type = "button", data-dismiss = "alert", arial-label = "Close")
+						.form-group
+							label(for = "signinName") 用户名
+							input#signinName.form-control(name = "user[name]", type = "text", placeholder = "Username")
+						.form-group
+							label(for = "signinPassword") 密码
+							input#signinPassword.form-control(name = "user[password]", type = "text", placeholder = "Password")
+					.modal-footer
+						button.btn.btn-default(type = "button", data-dismiss = "modal") 关闭
+						button.btn.btn-success(type = "submit") 提交
+			.col-md-4
+		
