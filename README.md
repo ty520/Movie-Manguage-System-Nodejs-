@@ -3,13 +3,20 @@
 
 项目文件说明：
 1.项目的入口文件app.js;
+
 2.路由配置文件routes/index.js;
+
 3.静态资源（js/css/image/libs（Boostrap&Jquery库文件））文件public;
+
 4.app->controllers:各个页面的路由API；
-5.app->schemas:mongoose中Schem定义——即数据库数据存储形式和操作
-6.app->models:根据schema产生models模板
-7.app->views各个页面的Jade模板。
-8.node_modules:根据package.json文件 npm install 各个依赖库
+
+5.app->schemas:mongoose中Schem定义——即数据库数据存储形式和操作；
+
+6.app->models:根据schema产生models模板；
+
+7.app->views各个页面的Jade模板；
+
+8.node_modules:根据package.json文件 npm install 各个依赖库。
 
 项目介绍：
 1.电影模块——首页电影展示、电影后台录入、电影后台跟新、电影列表页面、电影删除；
