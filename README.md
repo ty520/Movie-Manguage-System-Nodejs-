@@ -28,4 +28,7 @@
 #项目使用说明：
 下载后直接进入项根目录——>根据package.json安装依赖库（npm install repoName --save-dev）——>运行grunt即可。
 
+#demo
+https://ty520.github.io/questionnaire/#listpage
+
 
